@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: derived
+source: The-Monetizr-Campaigns-Unity-SDK (ServerCampaign.cs, Asset.cs, Reward class)
+api: Monetizr Campaigns API
+entities:
+  - name: Campaign
+    description: A branded ad unit / mission returned by GET /api/campaigns for a game.
+    id_field: id
+    fields:
+      - {name: id, type: string}
+      - {name: brand_id, type: string}
+      - {name: application_id, type: string}
+      - {name: title, type: string}
+      - {name: content, type: string}
+      - {name: progress, type: integer}
+      - {name: reward, type: integer}
+      - {name: dar_tag, type: string}
+      - {name: panel_key, type: string}
+      - {name: testmode, type: boolean}
+      - {name: end_date, type: string}
+      - {name: campaignType, type: enum}
+      - {name: trackingURLs, type: array}
+  - name: Reward
+    description: An in-game or brand-sponsored reward granted when a campaign/mission is claimed.
+    fields:
+      - {name: reward, type: integer}
+  - name: Asset
+    description: A media asset (image/video/survey/HTML) attached to a campaign.
+    id_field: id
+    fields:
+      - {name: id, type: string}
+      - {name: type, type: string}
+      - {name: title, type: string}
+      - {name: url, type: string}
+      - {name: survey_content, type: string}
+      - {name: mediaType, type: string}
+  - name: Settings
+    description: Global key/value settings dictionary returned by GET /settings that configures SDK behavior.
+relationships:
+  - {from: Campaign, to: Reward, kind: has_many, via: rewards}
+  - {from: Campaign, to: Asset, kind: has_many, via: assets}
+  - {from: Campaign, to: Brand, kind: belongs_to, via: brand_id}
+  - {from: Campaign, to: Application, kind: belongs_to, via: application_id}
+notes:
+  - Derived from the first-party Unity SDK data classes; the provider publishes no OpenAPI/object reference.

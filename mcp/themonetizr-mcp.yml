@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: The-Monetizr-Campaigns-Unity-SDK (MonetizrHttpClient.cs)
+note: >-
+  No official hosted/remote MCP server was found for Monetizr. This is a CANDIDATE tool
+  list derived from the real Monetizr Campaigns API operations the Unity SDK calls
+  (base https://api.themonetizr.com, Bearer per-game API key). Not published by the provider.
+server:
+  name: themonetizr
+  transport: http
+tools:
+  - name: get_settings
+    description: Fetch the global settings dictionary that configures SDK/campaign behavior.
+    method: GET
+    path: /settings
+  - name: list_campaigns
+    description: List the active branded campaigns/missions available for the game.
+    method: GET
+    path: /api/campaigns
+  - name: reset_campaign
+    description: Reset a campaign's progress/state for the current player.
+    method: GET
+    path: /api/campaigns/{campaignId}/reset
+  - name: claim_reward
+    description: Claim the reward for a completed campaign/mission.
+    method: POST
+    path: /api/campaigns/{campaignId}/claim

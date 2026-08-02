@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: derived
+source: The-Monetizr-Campaigns-Unity-SDK (NetworkingUtils.cs, MonetizrHttpClient.cs)
+standards:
+  - id: rfc6750-bearer
+    conforms: true
+    evidence: Authorization header uses the HTTP Bearer scheme (RFC 6750).
+  - id: tls
+    conforms: true
+    evidence: SDK enforces TLS 1.2 (ServicePointManager.SecurityProtocol) for all API calls.
+  - id: oauth2
+    conforms: false
+    evidence: Static per-game Bearer API key; no OAuth2 authorization/token flows.
+  - id: openid-connect
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No application/problem+json error envelope published.
+  - id: vast
+    conforms: true
+    evidence: Campaigns deliver VAST XML / programmatic (Prebid) ad creatives handled by the SDK.
+  - id: openrtb-prebid
+    conforms: true
+    evidence: SDK integrates Prebid Mobile for programmatic campaign bidding on Android and iOS.

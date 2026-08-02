@@ -1,0 +1,14 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK
+packages:
+  - language: csharp
+    platform: unity
+    registry: github
+    name: The-Monetizr-Campaigns-Unity-SDK
+    url: https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK
+    install: 'Unity Package Manager: Add package from git URL https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK.git — or import the released .unitypackage'
+    version: v1.1.9
+    license: MIT
+    official: true
+    description: Official Monetizr Campaigns SDK for Unity — renders branded in-game campaigns/missions and calls the Monetizr Campaigns API.

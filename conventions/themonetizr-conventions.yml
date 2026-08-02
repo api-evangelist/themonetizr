@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: derived
+source: The-Monetizr-Campaigns-Unity-SDK (MonetizrHttpClient.cs, NetworkingUtils.cs)
+api: Monetizr Campaigns API
+base_url: https://api.themonetizr.com
+authentication:
+  style: http-bearer
+  header: 'Authorization: Bearer <apiKey>'
+  ref: authentication/themonetizr-authentication.yml
+content_type:
+  request: application/json
+  response: application/json
+  accept: application/json
+context_headers:
+  # Non-auth request headers the SDK attaches on every call
+  - player-id
+  - ad-id
+  - sdk-version
+  - os-group
+  - device-group
+idempotency:
+  supported: false
+  notes: No idempotency-key header or documented idempotency contract is present in the SDK or docs.
+pagination:
+  supported: false
+  notes: The campaigns list returns the full active-campaign set for the game; no paging params observed.
+versioning:
+  scheme: none-observed
+  notes: >-
+    The API base host is versioned by hostname (api / api3 / api-test); no request-level
+    API version header or path segment is documented. The SDK (client) is versioned via
+    GitHub releases (see changelog/).
+error_envelope:
+  style: unknown
+  notes: The SDK treats non-2xx as failures and logs status codes; no structured error schema is published.
+rate_limit_signaling:
+  documented: false
+metadata:
+  server_settings: >-
+    The /settings endpoint returns a global key/value settings dictionary that tunes SDK
+    behavior (e.g. base_api_endpoint override, analytics proxy endpoint, fallback flags).
+cross_links:
+  authentication: authentication/themonetizr-authentication.yml
+  lifecycle: lifecycle/themonetizr-lifecycle.yml
+  data_model: data-model/themonetizr-data-model.yml

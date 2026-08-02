@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: searched
+source: The-Monetizr-Campaigns-Unity-SDK (MonetizrHttpClient.cs), https://api-test.themonetizr.com
+api: Monetizr Campaigns API
+test_live_separation:
+  mechanism: separate-host + SDK testEnvironment flag
+  production_base: https://api.themonetizr.com
+  test_base: https://api-test.themonetizr.com
+  toggle: >-
+    Setting the SDK testEnvironment flag switches the base API URL to
+    https://api-test.themonetizr.com; the base can also be overridden at runtime via the
+    'base_api_endpoint' global setting.
+test_flags:
+  - name: testmode
+    on: Campaign
+    description: Server-marked campaigns flagged as test-mode campaigns.
+  - name: LocalTestCampaignManager
+    description: SDK utility that serves local test campaigns/assets for offline QA.
+notes:
+  - The test host api-test.themonetizr.com responds (200) and is a real, first-party test environment.
+  - No published test API keys or magic test identifiers were found; provisioning is per-game via the Monetizr console.

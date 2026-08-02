@@ -1,0 +1,33 @@
+# Monetizr (TheMonetizr)
+
+> Monetizr is a gaming media platform for in-game brand advertising. It turns gameplay into
+> measurable, voluntary brand engagement through branded campaigns and missions rewarded in-game.
+> The Monetizr Campaigns API (base https://api.themonetizr.com) serves active campaigns to games
+> and is consumed by the official Unity SDK; authentication is a per-game HTTP Bearer API key.
+
+## APIs
+- [Monetizr Campaigns API](https://api.themonetizr.com): List branded campaigns/missions, reset progress, and claim rewards for a game.
+
+## Operations (derived from the official Unity SDK)
+- GET /settings — global settings dictionary that configures campaign/SDK behavior
+- GET /api/campaigns — list active campaigns/missions for the game
+- GET /api/campaigns/{campaignId}/reset — reset a campaign's state for the player
+- POST /api/campaigns/{campaignId}/claim — claim the reward for a completed campaign
+
+## SDKs
+- [Monetizr Campaigns SDK for Unity (C#)](https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK) — MIT, official
+
+## Docs
+- [Unity Campaigns SDK Wiki](https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK/wiki/Unity-Campaigns-SDK)
+- [GitHub organization](https://github.com/themonetizr)
+
+## Operational
+- [Status dashboard](https://status.themonetizr.com)
+- [Changelog / SDK releases](https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK/releases)
+
+## Company
+- [Website](https://monetizr.com)
+- [For Brands](https://monetizr.com/brands)
+- [For Publishers](https://monetizr.com/publishers)
+- [Terms of Service](https://monetizr.com/terms-of-service)
+- [Privacy Policy](https://monetizr.com/privacy-policy)

@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://status.themonetizr.com
+api: Monetizr Campaigns API
+versioning:
+  scheme: host-based
+  hosts:
+    production: https://api.themonetizr.com
+    api3: https://api3.themonetizr.com
+    test: https://api-test.themonetizr.com
+  sdk_versioning:
+    scheme: semver
+    current: v1.1.9
+    source: https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK/releases
+status_page: https://status.themonetizr.com
+status_monitored_services:
+  - {name: Monetizr API, url: https://api3.themonetizr.com}
+  - {name: Console, url: https://api.themonetizr.com}
+  - {name: Image server, url: https://image.themonetizr.com}
+  - {name: Homepage, url: https://themonetizr.com}
+  - {name: Docs, url: https://docs.themonetizr.com}
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No published deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+deprecated_operations: []

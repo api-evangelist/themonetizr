@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/themonetizr/The-Monetizr-Campaigns-Unity-SDK/releases
+scope: Monetizr Campaigns SDK for Unity (client releases)
+scheme: semver
+current_version: v1.1.9
+entries:
+  - version: v1.1.9
+    date: '2026-01-21'
+    highlights:
+      - Removed unused dependencies
+      - Streamlined analytics
+      - Fixed SafeArea UI issue
+    breaking: false
+  - version: v1.1.8
+    date: '2025-11-05'
+    highlights:
+      - Added Prebid campaigns support for Android and iOS
+      - Added Endpoint campaigns support for Android and iOS
+      - Added fallback/repeat campaign cycle
+      - Fixed GDPR consent issues
+    breaking: false
+  - version: v1.1.7
+    date: '2025-04-15'
+    highlights:
+      - UserConsent setup function and documentation fix
+    breaking: false
+  - version: v1.1.6
+    date: '2025-04-14'
+    highlights:
+      - UserConsent setup
+      - VAST and Programmatic campaigns support expanded
+    breaking: false
+  - version: 1.1.5
+    date: '2025-01-13'
+    breaking: false
